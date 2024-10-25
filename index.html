@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stringee Video Test</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="./css/style.css">
+        <style>
+            #answerBtn, #rejectBtn {
+                background-color: green;
+                color: white;
+            }
+            #incoming-call-div {
+                display: none;
+            }
+        </style>
+
+        <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="./js/latest.sdk.bundle.min.js"></script>
+
+        <script type="text/javascript">
+            var server = 'production';//local | test | production
+//            var server = 'local';//local | test | production
+
+            var userId;
+            var STRINGEE_SERVER_ADDRS;
+
+            var stringeeClient;
+            var getTokenUrl;
+
+            //room1: room-vn-1-TC0F51H8BP-1589370038786
+            //room2: room-vn-1-TC0F51H8BP-1589370038788
+            var roomId = "room-vn-1-TC0F51H8BP-1589370038788";
+            var roomToken;
+            var room;
+            var localTracks = [];
+            var subscribedTracks = [];
+            var localTrack22;//de chon device
+
+            if (server === 'local') {
+                STRINGEE_SERVER_ADDRS = ['wss://local-huydn.stringee.com:6899/', 'wss://local-huydn.stringee.com:5899/'];
+                getTokenUrl = './php/token.php';
+            } else if (server === 'production') {
+                STRINGEE_SERVER_ADDRS = ['wss://v1.stringee.com:6899/', 'wss://v2.stringee.com:6899/'];
+                getTokenUrl = './php/token_pro.php';
+            } else if (server === 'test') {
+                STRINGEE_SERVER_ADDRS = ['wss://test3.stringee.com:6899/', 'wss://test3.stringee.com:6899/'];
+                getTokenUrl = './php/token_test.php';
+                roomId = 'room-vn-1-05FMPGG6CQ-1624604370606';
+                //https://test-portal.stringeev-local.com:8080/en/share/atb-kypg-bzs?pwd=ghskunvreipyqcxbmfltoadzw
+            } else if (server === 'test217') {
+                roomId = 'room-vn-1-1D2YSVDO3B-1626453899389';
+                STRINGEE_SERVER_ADDRS = ['wss://test217.stringee.com:36899/', 'wss://test217.stringee.com:36899/'];
+                getTokenUrl = './php/token_test217.php';
+            }
+
+            function isSafari() {
+                var ua = navigator.userAgent.toLowerCase();
+                if (ua.indexOf('safari') != -1) {
+                    if (ua.indexOf('chrome') > -1) {
+                    } else {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function login() {
+                userId = $('#userId').val();
+                if (userId.length === 0) {
+                    alert('Please enter your user ID');
+                    return;
+                }
+
+                if (!stringeeClient) {
+                    stringeeClient = new StringeeClient(STRINGEE_SERVER_ADDRS);
+
+                    settingsClientEvents(stringeeClient);
+                    getAccessTokenAndConnectToStringee(stringeeClient);
+                }
+            }
+
+            function settingsClientEvents(client) {
+                client.on('authen', function (res) {
+                    console.log('on authen: ', res);
+                    if (res.r === 0) {
+                        $('#loginBtn').attr('disabled', 'disabled');
+                        $('#checkDeviceBtn').removeAttr('disabled');
+                        $('#loggedUserId').html(res.userId);
+                        $('#loggedUserId').css('color', 'blue');
+                    }
+                });
+
+                client.on('disconnect', function () {
+                    console.log('++++++++++++++ disconnected');
+                });
+
+                client.on('requestnewtoken', function () {
+                    console.log('++++++++++++++ requestnewtoken+++++++++');
+                    getAccessTokenAndConnectToStringee(client)
+                });
+            }
+
+            function getAccessTokenAndConnectToStringee(client) {
+                getTokenUrl = getTokenUrl + "?userId=" + userId + "&roomId=" + roomId;
+                console.log('getAccessTokenAndConnectToStringee', getTokenUrl);
+
+
+                $.getJSON(getTokenUrl, function (res) {
+                    console.log('res', res);
+                    var access_token = res.access_token;
+                    client.connect(access_token);
+
+                    roomToken = res.room_token;
+                });
+            }
+
+            var selectedCameraId = null;
+            var selectedMicrophoneId = null;
+            var selectedSpeakerId = null;
+
+            $(document).ready(function () {
+                $('#loginBtn').removeAttr('disabled');
+                $('#sdkVersion').html(StringeeUtil.version().version + '_build_' + StringeeUtil.version().build);
+
+                $("#listCameras").change(function () {
+                    selectedCameraId = $("#listCameras").val();
+                    localStorage.setItem("selectedCameraId", selectedCameraId);
+                    console.log('selectedCameraId===' + selectedCameraId);
+
+                    if (!localTrack22) {
+                        return;
+                    }
+                    localTrack22.changeDevice('video', selectedCameraId);
+                });
+
+                $("#listMicrophones").change(function () {
+                    selectedMicrophoneId = $("#listMicrophones").val();
+                    localStorage.setItem("selectedMicrophoneId", selectedMicrophoneId);
+
+                    if (!localTrack22) {
+                        return;
+                    }
+                    localTrack22.changeDevice('audio', selectedMicrophoneId);
+                });
+                $("#listSpeakers").change(function () {
+                    selectedSpeakerId = $("#listSpeakers").val();
+                    localStorage.setItem("selectedSpeakerId", selectedSpeakerId);
+
+                    subscribedTracks.forEach(track => {
+                        track.routeAudioToSpeaker(selectedSpeakerId);
+                    });
+                });
+                $("#videoDimensions").change(function () {
+                    var videoDimensions = $('#videoDimensions').val();
+                    console.log('videoDimensions===' + videoDimensions);
+
+                    var newOptions = {
+                        video: true,
+                        screen: false,
+                        videoDeviceId: selectedCameraId,
+                        videoDimensions: getVideoWH()
+                    };
+                    if (!localTrack22) {
+                        return;
+                    }
+                    localTrack22.changeDevice('video', null, newOptions);
+                });
+
+
+
+                //ham nay goi khi vao page Check Devices
+                StringeeVideo.getDevicesInfo().then(function (data) {
+                    console.log('StringeeVideo.getDevicesInfo()..., thu lay thong tin ve thiet bi');
+                    renderDevicesInfo(data);
+                });
+            });
+
+            function renderDevicesInfo(data) {//neu User chua cap quyen thi ham nay tra ve da rong~
+                selectedCameraId = localStorage.getItem("selectedCameraId");
+                selectedMicrophoneId = localStorage.getItem("selectedMicrophoneId");
+                selectedSpeakerId = localStorage.getItem("selectedSpeakerId");
+
+                console.log('local storage: selectedMicrophoneId=====' + selectedMicrophoneId);
+
+                $('#listCameras').html('');
+                $('#listMicrophones').html('');
+                $('#listSpeakers').html('');
+
+                var selectedCameraOk;
+                var selectedMicOk;
+                var selectedSpeakerOk;
+
+                data.cameras.forEach((camera, index) => {
+                    var option = $('<option>').val(camera.deviceId).text(camera.label);
+                    if (selectedCameraId && selectedCameraId === camera.deviceId) {
+                        option.attr('selected', 'selected');
+                        selectedCameraOk = true;
+                    }
+
+                    $('#listCameras').append(option);
+                });
+                data.microphones.forEach((mic, index) => {
+                    var option = $('<option>').val(mic.deviceId).text(mic.label);
+                    if (selectedMicrophoneId && selectedMicrophoneId === mic.deviceId) {
+                        option.attr('selected', 'selected');
+                        selectedMicOk = true;
+                    }
+
+                    $('#listMicrophones').append(option);//deviceId
+                });
+                data.speakers.forEach((speaker, index) => {
+                    var option = $('<option>').val(speaker.deviceId).text(speaker.label);
+                    if (selectedSpeakerId && selectedSpeakerId === speaker.deviceId) {
+                        option.attr('selected', 'selected');
+                        selectedSpeakerOk = true;
+                    }
+
+                    $('#listSpeakers').append(option);//deviceId
+                });
+
+                if (selectedCameraId && !selectedCameraOk) {
+                    localStorage.removeItem("selectedCameraId");
+                    selectedCameraId = null;
+                }
+                if (selectedMicrophoneId && !selectedMicOk) {
+                    localStorage.removeItem("selectedMicrophoneId");
+                    selectedMicrophoneId = null;
+                }
+                if (selectedSpeakerId && !selectedSpeakerOk) {
+                    localStorage.removeItem("selectedSpeakerId");
+                    selectedSpeakerId = null;
+                }
+            }
+
+            function checkDevice() {
+                var pubOptions = {
+                    audio: true,
+                    video: true,
+                    screen: false,
+                    videoDimensions: getVideoWH()
+                };
+
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    // true for mobile device
+                    $('#switchCameraBtn').removeAttr('disabled');
+                    pubOptions.mobileCamera = "front";//| "back"
+                }//=> OK voi Chrome tren Android
+
+                if (selectedCameraId) {
+                    pubOptions.videoDeviceId = selectedCameraId;
+                }
+                if (selectedMicrophoneId) {
+                    pubOptions.audioDeviceId = selectedMicrophoneId;
+                }
+
+                localTrack22 = new StringeeVideoTrack(stringeeClient, pubOptions);
+                localTrack22.isLocal = true;
+
+                localTrack22.on('gotDevicesInfo', function (data) {
+                    console.log('++++++++++StringeeVideo.devices', data);
+                    renderDevicesInfo(data);
+                });
+                
+                localTrack22.on('changedevice', function (data) {
+                    console.log('++++++++++localTrack22 changedevice', data);
+                    if(data.type === 'both' || data.type === 'video'){
+                        var videoElements = localTrack22.detach();
+                        videoElements.forEach(element => {
+                            element.srcObject = null;
+                            element.srcObject = localTrack22.webrtc.localStream;
+                        });
+                    }
+                });
+
+                var promiseLocalTrackInit = localTrack22.init();
+                promiseLocalTrackInit.then(function (localTrack1) {
+                    localTracks.push(localTrack1);
+
+                    //ready for publish
+                    $('#joinBtn').removeAttr('disabled');
+                    $('#checkDeviceBtn').attr('disabled', 'disabled');
+
+                    //play local video
+                    var videoElement = localTrack1.attach();
+                    videoElement.setAttribute("style", "width: 300px;background: black;padding: 5px;height: 200px;margin: 5px");
+                    videoElement.setAttribute("controls", "true");
+                    document.body.appendChild(videoElement);
+
+                    if (localTrack1.webrtc.localStream.getVideoTracks().length > 0) {
+                        $('#disableVideoBtn').html('Disable local video');
+                    } else {
+                        $('#disableVideoBtn').html('Enable local video');
+                    }
+
+                }).catch(function (res) {
+                    console.log('create Local Video Track ERROR: name=' + res.name + "; res.message=" + res.message);
+                    showStatus(res.name + ": " + res.message);
+                });
+            }
+
+            function testShare() {
+                var pubOptions = {
+                    screen: true,
+                    screenAudio: true
+                };
+
+                var localTrack33 = new StringeeVideoTrack(stringeeClient, pubOptions);
+                localTrack33.isLocal = true;
+
+                var promiseLocalTrackInit = localTrack33.init();
+                promiseLocalTrackInit.then(function (localTrack1) {
+                    //ready for publish
+//                    $('#joinBtn').removeAttr('disabled');
+//                    $('#checkDeviceBtn').attr('disabled', 'disabled');
+
+                    testPublish(localTrack33);
+
+                    //play local video
+                    var videoElement = localTrack1.attach();
+                    videoElement.setAttribute("style", "width: 300px;background: black;padding: 5px;height: 200px;margin: 5px");
+                    videoElement.setAttribute("controls", "true");
+                    document.body.appendChild(videoElement);
+
+                }).catch(function (res) {
+                    console.log('create Local Video Track ERROR: ', res);
+                    showStatus(res.name + ": " + res.message);
+                });
+            }
+
+            function testJoin() {
+                testPublish(localTrack22);
+            }
+
+            function testPublish(localTrack1) {
+                console.log('create Local Video Track success: ', localTrack1);
+//                localTracks.push(localTrack1);
+
+                if (!room) {
+                    joinRoomAndSubAllTracks().then(function () {
+                        room.publish(localTrack1).then(function () {
+                            console.log('publish Local Video Track success: ' + localTrack1.serverId);
+                        }).catch(function (error1) {
+                            console.log('publish Local Video Track ERROR: ', error1);
+                        });
+                    }).catch();
+                } else {
+                    room.publish(localTrack1).then(function () {
+                        console.log('publish Local Video Track success: ' + localTrack1.serverId);
+                    }).catch(function (error1) {
+                        console.log('publish Local Video Track ERROR: ', error1);
+                    });
+                }
+            }
+
+            function getVideoWH() {
+                var videoDimensions = $('#videoDimensions').val();
+                console.log('videoDimensions: ' + videoDimensions);
+                if (videoDimensions == '720p') {
+                    videoDimensions = {
+                        width: {
+                            min: "1280",
+                            max: "1280"
+                        },
+                        height: {
+                            min: "720",
+                            max: "720"
+                        }
+                    };
+                } else if (videoDimensions == '480p') {
+                    videoDimensions = {
+                        width: {
+                            min: "854",
+                            max: "854"
+                        },
+                        height: {
+                            min: "480",
+                            max: "480"
+                        }
+                    };
+                } else if (videoDimensions == '360p') {
+                    videoDimensions = {
+                        width: {
+                            min: "640",
+                            max: "640"
+                        },
+                        height: {
+                            min: "360",
+                            max: "360"
+                        }
+                    };
+                } else if (videoDimensions == '240p') {
+                    videoDimensions = {
+                        width: {
+                            min: "426",
+                            max: "426"
+                        },
+                        height: {
+                            min: "240",
+                            max: "240"
+                        }
+                    };
+                } else if (videoDimensions == 'max') {//27-inch (3840 × 2160)
+                    videoDimensions = {
+                        width: {
+//                            min: "426",
+                            ideal: "3840",
+//                            max: "3840"
+                        },
+                        height: {
+//                            min: "240",
+                            ideal: "2160",
+//                            max: "2160"
+                        }
+                    };
+                    /*
+                     videoDimensions = {
+                     width: {
+                     ideal: "4096"
+                     },
+                     height: {
+                     ideal: "2160"
+                     },
+                     facingMode: "user" | facingMode: "environment"
+                     };
+                     
+                     */
+                } else {
+                    videoDimensions = {
+                        width: {
+                            min: "160",
+                            max: "160"
+                        },
+                        height: {
+                            min: "120",
+                            max: "120"
+                        }
+                    };
+
+                    //160x120
+                }
+                return videoDimensions;
+            }
+
+            function joinRoomAndSubAllTracks() {
+                let promise = new Promise(function (resolve, reject) {
+                    StringeeVideo.joinRoom(stringeeClient, roomToken).then(function (data) {
+                        console.log('join room success data: ', data);
+
+                        $('#shareScreenBtn').removeAttr('disabled');
+                        $('#leaveBtn').removeAttr('disabled');
+                        $('#muteBtn').removeAttr('disabled');
+                        $('#disableVideoBtn').removeAttr('disabled');
+                        $('#joinBtn').attr('disabled', 'disabled');
+                        $('#disableRemoteVideosBtn').removeAttr('disabled');
+                        $('#disableRemoteAudiosBtn').removeAttr('disabled');
+
+//                        $('#switchCameraBtn').removeAttr('disabled');
+
+                        $('#txtStatus').html('Joined, Permission control room: ' + data.room.permissionControlRoom);
+
+                        room = data.room;
+
+                        //room events
+                        room.clearAllOnMethos();
+                        room.on('joinroom', function (event) {
+                            console.log('on join room: ' + JSON.stringify(event.info));
+                        });
+                        room.on('leaveroom', function (event) {
+                            console.log('on leave room: ' + JSON.stringify(event.info));
+                        });
+                        room.on('message', function (event) {
+                            console.log('on message: ' + JSON.stringify(event.info));
+                        });
+                        room.on('addtrack', function (event) {
+                            console.log('on add track: ' + JSON.stringify(event.info));
+                            var local = false;
+                            localTracks.forEach(function (localTrack2) {
+                                if (localTrack2.serverId === event.info.track.serverId) {
+                                    console.log(localTrack2.serverId + ' is LOCAL');
+                                    local = true;
+                                }
+                            });
+                            if (!local) {
+                                subscribe(event.info.track);
+                            }
+                        });
+                        room.on('removetrack', function (event) {
+                            console.log('on remove track', event);
+                            var track = event.track;
+                            if (!track) {
+                                return;
+                            }
+
+                            //todo remove
+                            localTracks.forEach((localTrack2, index) => {
+                                if (localTrack2.serverId === track.serverId) {
+                                    localTracks.splice(index, 1);
+                                }
+                            });
+                            subscribedTracks.forEach((subscribedTrack22, index) => {
+                                if (subscribedTrack22.serverId === track.serverId) {
+                                    subscribedTracks.splice(index, 1);
+                                }
+                            });
+
+                            var mediaElements = track.detach();
+                            mediaElements.forEach(function (videoElement) {
+                                videoElement.remove();
+                            });
+                        });
+
+                        room.on('trackmediachange', function (event) {
+                            console.log('on track media change', event);
+                        });
+
+                        data.listTracksInfo.forEach(function (trackInfo) {
+                            subscribe(trackInfo);
+                        });
+
+                        resolve();
+                    }).catch(function (res) {
+                        reject();
+                        console.log('join room ERROR: ', res);
+                    });
+                });
+                return promise;
+            }
+
+            function subscribe(trackInfo) {
+                var subOptions = {
+                    audio: true,
+                    video: true
+                };
+
+                room.subscribe(trackInfo.serverId, subOptions).then(function (track) {
+                    console.log('subscribe success: track', track);
+                    console.log('subscribe success: subOptions', subOptions);
+
+                    subscribedTracks.push(track);
+
+                    track.on('ready', function () {
+                        console.log('track on ready');
+
+                        var videoElement = track.attach();
+                        videoElement.setAttribute("style", "width: 300px;background: #424141;padding: 5px;height: 200px;margin: 5px");
+                        videoElement.setAttribute("controls", "true");
+
+                        if (selectedSpeakerId) {
+                            track.routeAudioToSpeaker(selectedSpeakerId);
+                        }
+
+                        document.body.appendChild(videoElement);
+                    });
+                }).catch(function (res) {
+                    console.log('subscribe ERROR: ', res);
+                });
+            }
+
+            function testUnpublish() {
+                console.log('Unpublish');
+                localTracks.forEach(function (localTrack) {
+                    room.unpublish(localTrack);
+
+                    localTrack.detachAndRemove();
+                });
+            }
+
+            function testHangupCall() {
+                localTracks.forEach(function (localTrack) {
+                    localTrack.close();
+                });
+            }
+
+            function testLeave() {
+                room.leave(true);
+
+                localTracks.forEach(function (track) {
+                    track.close();
+                    track.detachAndRemove();
+                });
+                subscribedTracks.forEach(function (track) {
+                    track.detachAndRemove();
+                });
+
+                localTracks = [];
+                subscribedTracks = [];
+                room = null;
+
+                $('#shareScreenBtn').attr('disabled', 'disabled');
+                $('#leaveBtn').attr('disabled', 'disabled');
+                $('#muteBtn').attr('disabled', 'disabled');
+                $('#disableVideoBtn').attr('disabled', 'disabled');
+                $('#checkDeviceBtn').removeAttr('disabled');
+            }
+
+            function sendMsg() {
+                var msg = {
+                    a: 'b',
+                    c: 1,
+                    d: ['1', '2', '3']
+                };
+                room.sendMessage(msg).then(function () {
+                    console.log('send ok');
+                }).catch(function (e) {
+                    console.log('send error', e);
+                });
+            }
+
+            function showStatus(txtStatus) {
+                $('#txtStatus').html(txtStatus);
+            }
+
+            function testMute() {
+                localTracks.forEach(function (track) {
+                    if (track.muted) {
+                        //unmute
+                        console.log('unmute');
+                        track.mute(false);
+                        $('#muteBtn').html('Mute');
+                    } else {
+                        //mute
+                        console.log('mute');
+                        track.mute(true);
+                        $('#muteBtn').html('Unmute');
+                    }
+                });
+            }
+
+            function testDisableRemoteVideosBtn() {
+                if (!room.permissionControlRoom) {
+                    alert('You are not Host, permission denied');
+                    return;
+                }
+
+                subscribedTracks.forEach(function (track) {
+                    if (track.screen) {
+                        return;
+                    }
+
+                    track.disableRemoteVideo();
+                    $('#disableRemoteVideosBtn').attr('disabled', 'disabled');
+                });
+            }
+
+            function testDisableRemoteAudiosBtn() {
+                if (!room.permissionControlRoom) {
+                    alert('You are not Host, permission denied');
+                    return;
+                }
+
+                subscribedTracks.forEach(function (track) {
+                    if (track.screen) {
+                        return;
+                    }
+
+                    track.disableRemoteAudio();
+                    $('#disableRemoteAudiosBtn').attr('disabled', 'disabled');
+                });
+            }
+
+            function testDisableVideo() {
+                localTracks.forEach(function (track) {
+                    if (track.screen) {
+                        return;
+                    }
+
+                    console.log('hien tai track.localVideoEnabled=' + track.localVideoEnabled);
+
+                    if (track.localVideoEnabled) {
+                        //disable
+                        track.enableLocalVideo(false);
+                        $('#disableVideoBtn').html('Enable local video');
+                    } else {
+                        //enable
+                        track.enableLocalVideo(true);
+                        $('#disableVideoBtn').html('Disable local video');
+                    }
+                });
+            }
+
+            function switchCamera() {
+                localTracks.forEach(function (track) {
+                    if (track.screen) {
+                        return;
+                    }
+
+                    track.switchCamera();
+                });
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <div>
+            <input id="userId" type="text" name="toUsername" style="width: 200px;" placeholder="Your userID" value="ACBTYKKO5L">
+            <button id="loginBtn" onclick="login()" disabled="">Login</button>
+            Logged in: <span id="loggedUserId" style="color: red">Not logged</span> |
+            SdkVersion: <span id="sdkVersion" style="color: blue"></span>
+        </div>
+        <div>
+            <br>
+            <select id="listCameras">
+                <option value="">Choose camera</option>
+            </select>
+            <select id="videoDimensions">
+                <option value="max">Max resolution</option>
+                <option value="720p">720p (1280x720)</option>
+                <option value="480p">480p (854x480)</option>
+                <option value="360p">360p (640x360)</option>
+                <option value="240p">240p (426x240)</option>
+                <option value="default">default</option>
+            </select>
+
+            <select id="listMicrophones">
+                <option value="">Choose Microphone</option>
+            </select>
+            <select id="listSpeakers">
+                <option value="">Choose Speaker</option>
+            </select>
+
+
+
+            <br><br>
+
+            <button id="checkDeviceBtn" onclick="checkDevice()" disabled="">Check device</button>
+
+            <button id="joinBtn" onclick="testJoin()" disabled="">Join room</button>
+
+            <button id="shareScreenBtn" onclick="testShare()" disabled="">Share Screen</button>
+
+
+            <button id="muteBtn" onclick="testMute()">Mute</button>
+
+            <button id="disableRemoteVideosBtn" onclick="testDisableRemoteVideosBtn()" disabled="">Disable all remote videos</button>
+            <button id="disableRemoteAudiosBtn" onclick="testDisableRemoteAudiosBtn()" disabled="">Disable all remote audios</button>
+
+            <button id="disableVideoBtn" onclick="testDisableVideo()">Disable local video</button>
+
+            <button id="switchCameraBtn" onclick="switchCamera()" disabled="">Switch Camera (mobile only)</button>
+
+            <button id="leaveBtn" onclick="testLeave()" disabled="">Leave room</button>
+
+            Status: <span id="txtStatus" style="color: red">Not started</span>
+        </div>
+
+        <div id="videos"></div>
+
+    </body>
+
+</html>
