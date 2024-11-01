@@ -58,13 +58,14 @@ namespace SendFileToDriveWinForm
             }
 
             // Kiểm tra xem tệp có tồn tại không
-            if (!System.IO.File.Exists(fileBox.Text)) // Sử dụng System.IO.File để rõ ràng
+            if (!System.IO.File.Exists(fileBox.Text))
             {
                 MessageBox.Show("Đường dẫn tới tệp không hợp lệ!", "Nhập một đường dẫn hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            string credentialsPath = "TênTệpChứngNhận"; // Đường dẫn đến tệp chứng nhận của bạn
+            // Đường dẫn đến tệp chứng nhận của bạn
+            string credentialsPath = "SendFileToDriveWinForm\\bin\\Debug\\credentials.json";
             UserCredential credential = await uploadDrive.ObtemAutorizacaoAsync(credentialsPath);
             DriveService service = uploadDrive.CriaDriveService(credential);
 

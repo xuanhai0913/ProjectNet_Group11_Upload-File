@@ -1,0 +1,392 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|c:\\users\\hashi\\documents\\github\\projectnet_group11_videocall\\sendfiletodrivewinform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|solutionrelative:sendfiletodrivewinform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n   \u011F\u011F\u011F\u011F8 !     \u0022     ",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n   \u011F\u011F\u011F\u011F8 !     \u0022     "
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\credentials.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\credentials.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Release\\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\obj\\Release\\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.SuggestedBindingRedirects.cache||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.SuggestedBindingRedirects.cache||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.CoreCompileInputs.cache||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.CoreCompileInputs.cache||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       0 !     \u0022     ",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       0 !     \u0022     "
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Auth.1.68.0\\NuGetIcon.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:packages\\Google.Apis.Auth.1.68.0\\NuGetIcon.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Properties\\Settings.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|solutionrelative:SendFileToDriveWinForm\\Properties\\Settings.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\UploadDrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|solutionrelative:SendFileToDriveWinForm\\UploadDrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|solutionrelative:SendFileToDriveWinForm\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|solutionrelative:SendFileToDriveWinForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6A2C0325-6378-4667-8679-AE84A3538B75}|SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj|solutionrelative:SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Google.Apis.xml",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.xml",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.xml",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.xml",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-11-01T14:09:16.441Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Google.Apis.pdb",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.pdb",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.pdb",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.pdb",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.pdb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002276|",
+              "WhenOpened": "2024-11-01T14:09:21.911Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Form1.cs",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Form1.cs",
+              "RelativeToolTip": "SendFileToDriveWinForm\\Form1.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:38:24.812Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAOgSAAAAAAAAAAAWwPgSAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-11-01T14:58:53.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Settings.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Properties\\Settings.Designer.cs",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\Properties\\Settings.Designer.cs",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Properties\\Settings.Designer.cs",
+              "RelativeToolTip": "SendFileToDriveWinForm\\Properties\\Settings.Designer.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:57:21.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SendFileToDriveWinForm.pdb",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.pdb",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.pdb",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.pdb",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.pdb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002276|",
+              "WhenOpened": "2024-11-01T14:52:24.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SendFileToDriveWinForm.exe - 1 [Neutral] - RCDATA",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe - 1 [Neutral] - RCDATA",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe - 1 [Neutral] - RCDATA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000165|",
+              "WhenOpened": "2024-11-01T14:52:21.676Z",
+              "EditorCaption": " - 1 [Neutral] - RCDATA"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UploadDrive.cs",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\UploadDrive.cs",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\UploadDrive.cs",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\UploadDrive.cs",
+              "RelativeToolTip": "SendFileToDriveWinForm\\UploadDrive.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwv34AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:38:31.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "credentials.json",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\credentials.json",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\credentials.json",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\credentials.json",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\credentials.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-01T14:24:32.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Form1.Designer.cs",
+              "RelativeToolTip": "SendFileToDriveWinForm\\Form1.Designer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:38:20.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SendFileToDriveWinForm.exe",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\SendFileToDriveWinForm.exe",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000165|",
+              "WhenOpened": "2024-11-01T14:52:18.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Program.cs",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\Program.cs",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\Program.cs",
+              "RelativeToolTip": "SendFileToDriveWinForm\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:38:17.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SendFileToDriveWinForm.csproj",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj",
+              "RelativeToolTip": "SendFileToDriveWinForm\\SendFileToDriveWinForm.csproj",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-01T14:38:13.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": ".NETFramework,Version=v4.7.2.AssemblyAttributes.cs",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Release\\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\obj\\Release\\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Release\\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs",
+              "RelativeToolTip": "SendFileToDriveWinForm\\obj\\Release\\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:09:02.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SendFileToDriveWinForm.csproj.SuggestedBindingRedirects.cache",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.SuggestedBindingRedirects.cache",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.SuggestedBindingRedirects.cache",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.SuggestedBindingRedirects.cache",
+              "RelativeToolTip": "SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.SuggestedBindingRedirects.cache",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002368|",
+              "WhenOpened": "2024-11-01T14:08:52.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SendFileToDriveWinForm.csproj.CoreCompileInputs.cache",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.CoreCompileInputs.cache",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.CoreCompileInputs.cache",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.CoreCompileInputs.cache",
+              "RelativeToolTip": "SendFileToDriveWinForm\\obj\\Debug\\SendFileToDriveWinForm.csproj.CoreCompileInputs.cache",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002368|",
+              "WhenOpened": "2024-11-01T14:08:49.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Google.Apis.Auth.dll - 1 [Neutral] - Version",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll - 1 [Neutral] - Version",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll - 1 [Neutral] - Version",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001697|",
+              "WhenOpened": "2024-11-01T14:04:48.413Z",
+              "EditorCaption": " - 1 [Neutral] - Version"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Google.Apis.Auth.dll",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.dll",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001697|",
+              "WhenOpened": "2024-11-01T14:04:45.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Google.Apis.Auth.pdb",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.pdb",
+              "RelativeDocumentMoniker": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.pdb",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.pdb",
+              "RelativeToolTip": "SendFileToDriveWinForm\\bin\\Debug\\Google.Apis.Auth.pdb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002276|",
+              "WhenOpened": "2024-11-01T14:04:43.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Google.Apis.Core.pdb",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.pdb",
+              "RelativeDocumentMoniker": "packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.pdb",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.pdb",
+              "RelativeToolTip": "packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.pdb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002276|",
+              "WhenOpened": "2024-11-01T14:04:09.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Google.Apis.Core.xml",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.xml",
+              "RelativeDocumentMoniker": "packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.xml",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.xml",
+              "RelativeToolTip": "packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-11-01T14:04:05.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Google.Apis.Core.dll",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.dll",
+              "RelativeDocumentMoniker": "packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.dll",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.dll",
+              "RelativeToolTip": "packages\\Google.Apis.Core.1.68.0\\lib\\net6.0\\Google.Apis.Core.dll",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001697|",
+              "WhenOpened": "2024-11-01T14:04:04.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NuGetIcon.png - PNG [64x64, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Auth.1.68.0\\NuGetIcon.png",
+              "RelativeDocumentMoniker": "packages\\Google.Apis.Auth.1.68.0\\NuGetIcon.png",
+              "ToolTip": "C:\\Users\\Hashi\\Documents\\GitHub\\ProjectNet_Group11_VideoCall\\packages\\Google.Apis.Auth.1.68.0\\NuGetIcon.png - PNG [64x64, 32 bit, PNG]",
+              "RelativeToolTip": "packages\\Google.Apis.Auth.1.68.0\\NuGetIcon.png - PNG [64x64, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-11-01T14:03:50.941Z",
+              "EditorCaption": " - PNG [64x64, 32 bit, PNG]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
