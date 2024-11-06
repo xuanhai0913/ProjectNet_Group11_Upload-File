@@ -78,7 +78,7 @@ namespace UploadFilesToDrive
             }
         }
 
-        // Bắt đầu quá trình upload tệp lên Google Drive
+        // Bắt đầu quá trình upload tệp lên google driver
         private async void btnUpload_Click(object sender, EventArgs e)
         {
             string folderName = txtFolderId.Text.Trim();
@@ -116,13 +116,13 @@ namespace UploadFilesToDrive
             var folderId = await FindFolderId(folderName);
             if (string.IsNullOrEmpty(folderId))
             {
-                // Nếu thư mục chưa tồn tại, tạo thư mục mới
+                // Nếu thư mục tồn tại, tạo thư mục mới
                 folderId = await CreateFolder(folderName);
             }
             return folderId;
         }
 
-        // Tìm ID của thư mục theo tên
+        // tìm ID của thư mục theo tên
         private async Task<string> FindFolderId(string folderName)
         {
             try
