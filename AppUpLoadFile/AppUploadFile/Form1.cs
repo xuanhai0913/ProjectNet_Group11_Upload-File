@@ -27,6 +27,7 @@ namespace UploadFilesToDrive
             InitializeDriveService();
             this.Click += new EventHandler(Form1_Click);
             // Đăng ký sự kiện Click cho tất cả các điều khiển
+            // Nghĩa là bất kỳ hành động click nào trong form đều được bắt được bởi Form1
             foreach (Control control in this.Controls)
             {
                 control.Click += new EventHandler(Form1_Click);
