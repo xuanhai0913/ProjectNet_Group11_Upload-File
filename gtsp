@@ -1,0 +1,30 @@
+Mục Tiêu và Phạm Vi
+-Mục tiêu sản phẩm:+Cho phép người dùng dễ dàng tải lên và tải xuống các tệp trên Google Drive
+  + Hỗ trợ quản lý thư mục, kiểm tra tồn tại của thư mục và tạo thư mục mới khi cần thiết
+-Phạm vi chức năng:
+  +Tải lên và tải xuống tệp
+  +Tạo và quản lý thư mục trên Google Drive
+  +Xóa tệp khỏi danh sách chờ
+  +Liệt kê các tệp trong thư mục
+  +Hủy quá trình tải lên khi cần thiết
+
+Các Chức Năng Chính Của Ứng Dụng
+-Khởi tạo dịch vụ Google Drive: Kết nối ứng dụng với Google Drive để truy cập dữ liệu
+-Tải lên tệp: Chọn tệp từ máy tính và tải lên Drive với khả năng chọn thư mục đích
+-Kiểm tra và tạo thư mục: Xác minh sự tồn tại của thư mục và tạo thư mục mới nếu cần
+-Xóa tệp trong danh sách chờ: Xóa tệp khỏi danh sách nếu không còn nhu cầu
+-Liệt kê tệp trong thư mục: Hiển thị các tệp có trong một thư mục cụ thể
+-Tải xuống tệp về máy tính: Chọn và tải tệp từ Google Drive về máy tính
+-Hủy tải lên: Dừng quá trình tải lên khi cần thiết
+
+-Công Nghệ Sử Dụng
++Google Drive API: Quản lý tải lên, tải xuống và tổ chức tệp/thư mục
++Windows Forms (C#): Tạo giao diện đồ họa đơn giản và dễ sử dụng
++OAuth 2.0: Cơ chế xác thực an toàn, đảm bảo quyền riêng tư của người dùng
+
+Quy Trình Hoạt Động Của Ứng Dụng
++Khởi tạo dịch vụ: Kết nối ứng dụng với Google Drive bằng API và xác thực người dùng
++Chọn tệp và tải lên: Người dùng chọn các tệp muốn tải lên và chọn thư mục đích
++Kiểm tra và quản lý thư mục: Xác minh thư mục hoặc tạo mới thư mục nếu chưa tồn tại
++Liệt kê tệp: Hiển thị danh sách các tệp trong thư mục đã chọn trên Google Drive
++Tải xuống tệp về máy: Người dùng chọn và tải các tệp về máy tính
