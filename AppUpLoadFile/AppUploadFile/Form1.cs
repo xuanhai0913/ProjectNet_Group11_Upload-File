@@ -439,13 +439,13 @@ namespace UploadFilesToDrive
             }
         }
 
-        // private void lstFolders_SelectedIndexChanged_1(object sender, EventArgs e)
-        // {
-        //     if (lstFolders.SelectedItem != null)
-        //     {
-        //         // Ghi giá trị của item đã chọn vào TextBox
-        //         txtFolderId.Text = lstFolders.SelectedItem.ToString();
-        //     }
-        // }
+        private void lstFolders_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (lstFolders.SelectedItem != null)
+            {
+                // Ghi giá trị của item đã chọn vào TextBox
+                txtFolderId.Text = lstFolders.SelectedItem.ToString();
+            }
+        }
     }
 }
