@@ -34,7 +34,7 @@ namespace UploadFilesToDrive
             }
         }
 
-        // Khởi tạo dịch vụ Google Drive với thông tin xác thực người dùng
+        // Khởi tạo dịch vụ Google Drive với thông tin xác thực người dùng 
         private void InitializeDriveService()
         {
             try
