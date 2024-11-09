@@ -1,4 +1,4 @@
-﻿using Google;
+using Google;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
@@ -62,7 +62,7 @@ namespace UploadFilesToDrive
             }
         }
 
-        // Mở hộp thoại để chọn tệp và thêm tệp vào danh sách để upload
+        // Mở hộp thoại để chọn tệp và thêm tệp vào danh sách để upload 
         private void btnAddFile_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
