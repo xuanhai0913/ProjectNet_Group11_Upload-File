@@ -32,3 +32,8 @@ ProjectNet_Group11_Upload-File là một ứng dụng upload file lên Drive đ�
 2. Chạy lệnh:
    ```bash
    Install-Package Google.Apis.Drive.v3
+
+### Bước 5: Chạy ứng dụng
+1. Nhấn F5 hoặc chọn "Start Debugging" để chạy ứng dụng.
+2. Bắt đầu sử dụng để tải lên và quản lý file trên Google Drive.
+
