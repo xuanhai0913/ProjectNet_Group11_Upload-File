@@ -13,8 +13,22 @@ ProjectNet_Group11_Upload-File là một ứng dụng upload file lên Drive đ�
 - **Phần mềm**: .NET Framework 4.7.2 trở lên, Visual Studio hoặc IDE hỗ trợ C#
 - **Thư viện bên ngoài**: Các thư viện cần thiết như Google.Apis.Drive.v3 để tích hợp API của Google Drive.
 
-## Cài Đặt
-1. **Clone repository**:
+## Hướng dẫn cài đặt
+### Bước 1: Chuẩn bị môi trường
+- Cài đặt [Visual Studio](https://visualstudio.microsoft.com/) (2019 hoặc mới hơn).
+- Đảm bảo đã cài đặt .NET Framework 4.7.2 hoặc mới hơn.
+
+### Bước 2: Tải mã nguồn
+1. Clone repository hoặc tải ZIP từ [GitHub](https://github.com/xuanhai0913/ProjectNet_Group11_Upload-File).
+2. Giải nén file ZIP vào thư mục mong muốn.
+
+### Bước 3: Mở dự án
+1. Mở Visual Studio.
+2. Chọn "Open a project or solution" và điều hướng đến thư mục chứa mã nguồn.
+3. Mở file dự án (.sln).
+
+### Bước 4: Cài đặt thư viện
+1. Mở "Package Manager Console" (Tools > NuGet Package Manager > Package Manager Console).
+2. Chạy lệnh:
    ```bash
-   git clone https://github.com/xuanhai0913/ProjectNet_Group11_Upload-File.git
-   cd ProjectNet_Group11_Upload-File
+   Install-Package Google.Apis.Drive.v3
